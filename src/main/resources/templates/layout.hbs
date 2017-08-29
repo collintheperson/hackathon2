@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}Taming of the Code{{/block}}</title>
+
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/app.css'>
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="/teams">See All Teams</a></li>
+    <li role="presentation"><a href="/teams/new">Add a New Team</a></li>
+    <li role="presentation"><a href="/members">See all members</a></li>
+
+</ul>
+<div class="container">
+    <div class="page-header">
+        <h1>Welcome to my 1st Annual Taming of the Code.<br> <small>A fictional invitation into all the wonders of fantasy and code!</small></h1>
+    </div>
+
+    <div class="col-md-12">
+        {{#block "content"}}
+        {{/block}}
+
+    </div>
+</div>
+{{#block "footer"}}
+    <footer class="footer">
+        <div class="container">
+            <p>Code on!</p>
+            <a href="/members/delete">Delete all Members</a></p>
+        </div>
+    </footer>
+    </body>
+    </html>
+{{/block}}

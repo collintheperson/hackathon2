@@ -1,0 +1,25 @@
+{{#partial "content"}}
+
+    <p>Member Name:</p>
+
+    {{#if members}}
+        <h1>Members</h1>
+        {{#each members}}
+            <h5>Member name:</h5>
+            <p>{{ memberName}}</p>
+            <h5> Team Number:</h5>
+            <p>{{teamId}}</p>
+            <a href="/teams/{{teamId}}/members/{{id}}/update">Edit this Member</a><br>
+
+        {{/each}}
+
+    {{/if}}
+
+
+    <a href="/teams/delete">Delete all members and teams</a><br>
+
+
+
+{{/partial}}
+
+{{> layout.hbs}}

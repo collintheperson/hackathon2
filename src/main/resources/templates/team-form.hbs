@@ -1,0 +1,28 @@
+{{#partial "content"}}
+
+    {{#if editTeam}}
+        <h1>Edit this Team!</h1>
+        <form action="/teams/{{editTeam.id}}/update" id="editTeamId" method="post" select name="editTeamId">
+            <label for="name">Edit this teams name.</label>
+            <input id="name" name="name" type="text" value="{{editTeam.name}}"><br>
+            <label for="description">Edit this team's description!</label>
+            <input id="description" name="description" type="text" value="{{editTeam.description}}"><br>
+
+    {{else}}
+
+            <h1>Add a new team!</h1>
+        <form action="/teams/new" method="post">
+            <label for="name">Name of your codealicous team!!</label>
+            <input id="name" name="name" type="text"><br>
+            <label for="description">Description of your codealicous team!!</label>
+            <input id="description" name="description" type="text"><br>
+
+
+
+
+    {{/if}}
+        <button type="submit" class="btn btn-danger">Go!</button>
+    </form>
+    </form>
+{{/partial}}
+{{> layout.hbs}}

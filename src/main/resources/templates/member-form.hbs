@@ -1,0 +1,28 @@
+{{#partial "content"}}
+
+    {{#if editMember}}
+        <h1>Edit this Member!</h1>
+        <form action="/teams/{{teamId}}/members/{{editMember.id}}/update" id="editMemberId" method="post" select name="editMemberId">
+            <label for="memberName">Edit this members name.</label>
+            <input id="memberName" name="memberName" type="text" value="{{editMember.memberName}}"><br>
+            <label for="badge">Edit this members badge.</label>
+            <input id="badge" name="badge" type="text" value="{{editMember.badge}}"><br>
+
+    {{else}}
+        <form action="/teams/{{teamId}}/members/new" method="post">
+            <label for="memberName"> Add a person</label>
+            <input id="memberName" name="memberName" type="text" required>
+            <label for="badge">Enter your desired badge number</label>
+            <input id="badge" name="badge" type="number" required<br>
+
+
+    {{/if}}
+
+
+        <button type="submit" class="btn btn-danger">Go!</button>
+    </form>
+
+
+{{/partial}}
+
+{{> layout.hbs}}
